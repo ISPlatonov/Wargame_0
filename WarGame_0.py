@@ -1,7 +1,8 @@
 from random import randint
 class Warrior:
+    def __init__(self, name_init):
+        self.name = name_init
     health = 100
-    name = 'Some person'
     def attack(self, person):
         try:
             person.health -= 20
@@ -9,10 +10,8 @@ class Warrior:
         except:
             print("It has not a health")
 
-per_1 = Warrior()
-per_1.name = "Warrior_1"
-per_2 = Warrior()
-per_2.name = "Warrior_2"
+per_1 = Warrior("Warrior_1")
+per_2 = Warrior("Warrior_2")
 
 while (per_1.health != 0) and (per_2.health != 0):
     n = randint(0, 10)
